@@ -76,7 +76,13 @@ elseif string.starts(command,Config.Prefix .. "yemekver") then
    if yazi[2] ~= nil and GetPlayerName(yazi[2]) ~= nil then
           
 
+
+    if yazi[3] ~= nil then
+
+
+
       local xPlayer = ESX.GetPlayerFromId(yazi[2])
+
 
 
          
@@ -88,7 +94,13 @@ elseif string.starts(command,Config.Prefix .. "yemekver") then
           webhookcalistir("İşlem Başarılı!", "Oyuncuya Başarıyla Yemek Gönderildi! :  " .. GetPlayerName(yazi[2]),65280)
 
 
-       
+        else 
+
+
+          webhookcalistir("İşlem Başarısız!","Lütfen Ne Kadar Yemek Vericeğinizi Belirtin!",16711680)
+    
+    
+          end
 
 
 
@@ -116,11 +128,20 @@ elseif string.starts(command,Config.Prefix .. "suver") then
   
    local yazi = bosluk(command," ", "  ")
 
-   
+
+
+
    if yazi[2] ~= nil and GetPlayerName(yazi[2]) ~= nil then
           
 
       local xPlayer = ESX.GetPlayerFromId(yazi[2])
+
+
+
+      if yazi[3] ~= nil then
+
+
+
 
 
          
@@ -132,8 +153,13 @@ elseif string.starts(command,Config.Prefix .. "suver") then
           webhookcalistir("İşlem Başarılı!", "Oyuncuya Başarıyla Su Gönderildi! :  " .. GetPlayerName(yazi[2]),65280)
 
 
+      else 
 
 
+      webhookcalistir("İşlem Başarısız!","Lütfen Ne Kadar Su Vericeğinizi Belirtin!",16711680)
+
+
+      end
 
      else
    
@@ -141,6 +167,8 @@ elseif string.starts(command,Config.Prefix .. "suver") then
 
      end
   
+
+
 
 
   else
@@ -163,6 +191,11 @@ elseif string.starts(command,Config.Prefix .. "radio") then
    if yazi[2] ~= nil and GetPlayerName(yazi[2]) ~= nil then
           
 
+
+    if yazi[3] ~= nil then
+
+
+
       local xPlayer = ESX.GetPlayerFromId(yazi[2])
 
 
@@ -176,6 +209,14 @@ elseif string.starts(command,Config.Prefix .. "radio") then
 
 
       
+        else 
+
+
+          webhookcalistir("İşlem Başarısız!","Lütfen Ne Kadar Telsiz Vericeğinizi Belirtin!",16711680)
+    
+    
+          end
+
 
 
 
@@ -205,6 +246,11 @@ elseif string.starts(command,Config.Prefix .. "sopaver") then
    if yazi[2] ~= nil and GetPlayerName(yazi[2]) ~= nil then
           
 
+
+
+    if yazi[3] ~= nil then
+
+
       local xPlayer = ESX.GetPlayerFromId(yazi[2])
 
 
@@ -217,7 +263,13 @@ elseif string.starts(command,Config.Prefix .. "sopaver") then
           webhookcalistir("İşlem Başarılı!", "Oyuncuya Başarıyla Sopa Gönderildi! :  " .. GetPlayerName(yazi[2]),65280)
 
 
-        
+        else 
+
+
+          webhookcalistir("İşlem Başarısız!","Lütfen Ne Kadar Sopa Vericeğinizi Belirtin!",16711680)
+    
+    
+          end
 
 
 
@@ -250,6 +302,10 @@ elseif string.starts(command,Config.Prefix .. "levyever") then
    if yazi[2] ~= nil and GetPlayerName(yazi[2]) ~= nil then
           
 
+    if yazi[3] ~= nil then
+
+
+
       local xPlayer = ESX.GetPlayerFromId(yazi[2])
 
 
@@ -262,7 +318,13 @@ elseif string.starts(command,Config.Prefix .. "levyever") then
           webhookcalistir("İşlem Başarılı!", "Oyuncuya Başarıyla Levye Gönderildi! :  " .. GetPlayerName(yazi[2]),65280)
 
 
-      
+        else 
+
+
+          webhookcalistir("İşlem Başarısız!","Lütfen Ne Kadar Crowbar Vericeğinizi Belirtin!",16711680)
+    
+    
+          end  
 
 
 
@@ -297,6 +359,11 @@ elseif string.starts(command,Config.Prefix .. "telefonver") then
    if yazi[2] ~= nil and GetPlayerName(yazi[2]) ~= nil then
           
 
+
+    if yazi[3] ~= nil then
+
+
+
       local xPlayer = ESX.GetPlayerFromId(yazi[2])
 
 
@@ -309,7 +376,13 @@ elseif string.starts(command,Config.Prefix .. "telefonver") then
           webhookcalistir("İşlem Başarılı!", "Oyuncuya Başarıyla Telefon Gönderildi! :  " .. GetPlayerName(yazi[2]),65280)
 
 
-        
+        else 
+
+
+          webhookcalistir("İşlem Başarısız!","Lütfen Ne Kadar Telefon Vericeğinizi Belirtin!",16711680)
+    
+    
+          end
 
 
 
@@ -342,6 +415,10 @@ elseif string.starts(command,Config.Prefix .. "tabancaver") then
    if yazi[2] ~= nil and GetPlayerName(yazi[2]) ~= nil then
           
 
+    if yazi[3] ~= nil then
+
+
+
       local xPlayer = ESX.GetPlayerFromId(yazi[2])
 
 
@@ -355,7 +432,13 @@ elseif string.starts(command,Config.Prefix .. "tabancaver") then
 
 
       
+        else 
 
+
+          webhookcalistir("İşlem Başarısız!","Lütfen Ne Kadar Pistol Vericeğinizi Belirtin!",16711680)
+    
+    
+          end
 
 
      else
@@ -393,12 +476,29 @@ elseif string.starts(command,Config.Prefix .. "özelitemver") then
       local xPlayer = ESX.GetPlayerFromId(yazi[2])
 
 
+
+      if yazi[4] ~= nil then
+
+
+
       xPlayer.addInventoryItem(yazi[3], yazi[4])
          
 
 
 
           webhookcalistir("İşlem Başarılı!", "Oyuncuya Başarıyla İtem Gönderildi! :  " .. GetPlayerName(yazi[2]),65280)
+
+
+
+        else 
+
+
+          webhookcalistir("İşlem Başarısız!","Lütfen Ne Kadar İtem Vericeğinizi Belirtin!",16711680)
+    
+    
+          end
+
+
    
      else
    
@@ -497,6 +597,10 @@ elseif string.starts(command,Config.Prefix .. "çıkışduyuru") then
        if yazi[2] ~= nil and GetPlayerName(yazi[2]) ~= nil then
             
 
+        if yazi[3] ~= nil then
+
+
+
         local xPlayer = ESX.GetPlayerFromId(yazi[2])
 
 
@@ -506,6 +610,16 @@ elseif string.starts(command,Config.Prefix .. "çıkışduyuru") then
 
 
             webhookcalistir("İşlem Başarılı!", "Oyuncuya Başarıyla Nakit Para Verildi! :  " .. GetPlayerName(yazi[2]),65280)
+
+
+          else 
+
+
+            webhookcalistir("İşlem Başarısız!","Lütfen Ne Kadar Para Vericeğinizi Belirtin!",16711680)
+      
+      
+            end
+
      
        else
      
